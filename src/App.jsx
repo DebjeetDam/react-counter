@@ -43,9 +43,10 @@ class App extends Component {
     this.setState({ counters });
   };
   render() {
+    let { counters } = this.state;
     return (
       <React.Fragment>
-        <NavBar />
+        <NavBar counters={counters} />
         <div className="container">
           <Counters
             counters={this.state.counters}
